@@ -1,0 +1,5 @@
+**/baml_client
+**/node_modules
+bun.lock
+*.local
+*.DS_Store

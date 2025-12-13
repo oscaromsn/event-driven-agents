@@ -1,0 +1,33 @@
+{
+  "name": "dataflow-agent-poc",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "server": "bun run src/server.ts",
+    "web": "vite",
+    "dev": "concurrently \"bun run server\" \"bun run web\"",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit",
+    "typecheck:watch": "tsc --watch --noEmit --preserveWatchOutput",
+    "baml:generate": "bunx baml-cli generate"
+  },
+  "dependencies": {
+    "@boundaryml/baml": "0.209.0",
+    "@types/dagre": "^0.7.53",
+    "dagre": "^0.8.5",
+    "effect": "^3.18.4"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^6.2.1",
+    "@types/bun": "latest",
+    "concurrently": "^9.2.1",
+    "svelte": "^5.43.3",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.12"
+  }
+}
